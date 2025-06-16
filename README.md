@@ -81,7 +81,7 @@ docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' kam
 Você pode usar ```sngrep``` para capturar os pacotes SIP entre os containers:
 
 ```bash
-docker exec -it kamailio sngrep
+sngrep
 ```
 
 Isso exibirá os pacotes SIP trocados entre ```ashe``` e ```braum```.
