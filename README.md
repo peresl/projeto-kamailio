@@ -36,7 +36,7 @@ projeto-kamailio/
 git clone https://github.com/peresl/projeto-kamailio.git
 cd projeto-kamailio
 ```
-##### 2. Permitir acesso ao display gráfico
+##### 2. Permitir Acesso ao Display Gráfico
 Execute o seguinte comando para permitir que os containers Docker acessem a tela do seu sistema:
 ```bash
 xhost +local:root
