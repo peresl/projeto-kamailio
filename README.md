@@ -36,11 +36,17 @@ projeto-kamailio/
 git clone https://github.com/peresl/projeto-kamailio.git
 cd projeto-kamailio
 ```
-##### 2. Construir e Iniciar os Containers
+##### 2. Permitir acesso ao display gráfico
+Execute o seguinte comando para permitir que os containers Docker acessem a tela do seu sistema:
+```bash
+xhost +local:root
+```
+
+##### 3. Construir e Iniciar os Containers
 ```bash
 docker compose up --build -d
 ```
-##### 3. Verificar os Containers em Execução
+##### 4. Verificar os Containers em Execução
 ```bash
 docker ps -a
 ```
