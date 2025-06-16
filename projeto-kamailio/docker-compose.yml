@@ -1,0 +1,39 @@
+version: "3.8"
+
+networks:
+  redekamailio:
+    driver: bridge
+
+services:
+  kamailio:
+    build:
+      context: .
+      dockerfile: Dockerfile-kamailio
+    container_name: kamailio
+    networks:
+      - redekamailio
+
+  linphone-ashe:
+    build:
+      context: .
+      dockerfile: Dockerfile-linphone
+    container_name: ashe
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    networks:
+      - redekamailio
+
+  linphone-braum:
+    build:
+      context: .
+      dockerfile: Dockerfile-linphone
+    container_name: braum
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    networks:
+      - redekamailio
+
