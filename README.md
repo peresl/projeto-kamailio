@@ -38,7 +38,7 @@ cd projeto-kamailio
 ```
 ##### 2. Construir e Iniciar os Containers
 ```bash
-docker-compose up --build -d
+docker compose up --build -d
 ```
 ##### 3. Verificar os Containers em Execução
 ```bash
